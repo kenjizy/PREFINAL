@@ -3,7 +3,7 @@ session_start();
 require 'db.php'; // Ensure this file connects to your database
 
 // Fetch all responses from the database
-$sql = "SELECT * FROM tbl_responses ORDER BY r_id ASC"; // Order by ID ascending
+$sql = "SELECT * FROM tbl_responses ORDER BY k_id ASC"; // Order by ID ascending
 $result = $conn->query($sql);
 
 $conn->close();
@@ -26,21 +26,21 @@ $conn->close();
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Description</th>
-                        <th>Goals</th>
+                        <th>Achievements</th>
+                        <th>Relax</th>
                         <th>Email</th>
                         <th>Name</th>
                         <th>Gender</th>
-                        <th>Code</th>
-                        <th>Subject</th>
-                        <th>Food</th>
-                        <th>Pet</th>
-                        <th>Sport</th>
-                        <th>Season</th>
-                        <th>Drink</th>
-                        <th>Motivation</th>
-                        <th>Week</th>
-                        <th>Top</th>
+                        <th>Foods</th>
+                        <th>Books</th>
+                        <th>Events</th>
+                        <th>Vacation</th>
+                        <th>Communicate</th>
+                        <th>Cuisine</th>
+                        <th>Work</th>
+                        <th>Stress</th>
+                        <th>Relax</th>
+                        <th>Goals</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -49,27 +49,27 @@ $conn->close();
                     $count = 1; // Start numbering from 1
                     while ($row = $result->fetch_assoc()): ?>
                         <tr>
-                            <td><?= $row['r_id'] ?></td>
-                            <td><?= htmlspecialchars($row['r_des']) ?></td>
-                            <td><?= htmlspecialchars($row['r_goals']) ?></td>
-                            <td><?= htmlspecialchars($row['r_email']) ?></td>
-                            <td><?= htmlspecialchars($row['r_na']) ?></td>
-                            <td><?= htmlspecialchars($row['r_gender']) ?></td>
-                            <td><?= htmlspecialchars($row['r_code']) ?></td>
-                            <td><?= htmlspecialchars($row['r_sub']) ?></td>
-                            <td><?= htmlspecialchars($row['r_food']) ?></td>
-                            <td><?= htmlspecialchars($row['r_pet']) ?></td>
-                            <td><?= htmlspecialchars($row['r_sport']) ?></td>
-                            <td><?= htmlspecialchars($row['r_season']) ?></td>
-                            <td><?= htmlspecialchars($row['r_drink']) ?></td>
-                            <td><?= htmlspecialchars($row['r_motiv']) ?></td>
-                            <td><?= htmlspecialchars($row['r_week']) ?></td>
-                            <td><?= htmlspecialchars($row['r_top']) ?></td>
+                            <td><?= $row['k_id'] ?></td>
+                            <td><?= htmlspecialchars($row['k_des']) ?></td>
+                            <td><?= htmlspecialchars($row['k_goals']) ?></td>
+                            <td><?= htmlspecialchars($row['k_email']) ?></td>
+                            <td><?= htmlspecialchars($row['k_na']) ?></td>
+                            <td><?= htmlspecialchars($row['k_gender']) ?></td>
+                            <td><?= htmlspecialchars($row['k_code']) ?></td>
+                            <td><?= htmlspecialchars($row['k_sub']) ?></td>
+                            <td><?= htmlspecialchars($row['k_food']) ?></td>
+                            <td><?= htmlspecialchars($row['k_pet']) ?></td>
+                            <td><?= htmlspecialchars($row['k_sport']) ?></td>
+                            <td><?= htmlspecialchars($row['k_season']) ?></td>
+                            <td><?= htmlspecialchars($row['k_drink']) ?></td>
+                            <td><?= htmlspecialchars($row['k_motiv']) ?></td>
+                            <td><?= htmlspecialchars($row['k_week']) ?></td>
+                            <td><?= htmlspecialchars($row['k_top']) ?></td>
                             <td>
     <div class="action-buttons">
-        <a href="view.php?id=<?= $row['r_id'] ?>" class="view">View</a>
-        <a href="edit.php?id=<?= $row['r_id'] ?>" class="edit">Edit</a>
-        <a href="delete.php?id=<?= $row['r_id'] ?>" class="delete">Delete</a>
+        <a href="view.php?id=<?= $row['k_id'] ?>" class="view">View</a>
+        <a href="edit.php?id=<?= $row['k_id'] ?>" class="edit">Edit</a>
+        <a href="delete.php?id=<?= $row['k_id'] ?>" class="delete">Delete</a>
     </div>
 </td
                         </tr>
@@ -79,7 +79,7 @@ $conn->close();
         </div>
 
         <div class="back-button-container">
-            <a href="index.php">Add Questions</a>
+            <a href="index.php">Add Another</a>
         </div>
     </div>
 </body>

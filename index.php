@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (empty($errors)) {
         // Insert into database
-        $stmt = $conn->prepare("INSERT INTO tbl_responses (r_des, r_goals, r_email, r_na, r_gender, r_code, r_sub, r_food, r_pet, r_sport, r_season, r_drink, r_motiv, r_week, r_top) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO tbl_responses (k_des, k_goals, k_email, k_na, k_gender, k_code, k_sub, k_food, k_pet, k_sport, k_season, k_drink, k_motiv, k_week, k_top) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
         $stmt->bind_param("sssssssssssssss",
             $_POST['q1'], $_POST['q2'], $_POST['q4'], $_POST['q3'], $_POST['q5'], $_POST['q6'],
@@ -78,13 +78,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <form method="post" action="">
             <div class="question-container">
-                <label>1. Describe yourself:</label>
+                <label>1. What is one achievement you are most proud of?</label>
                 <textarea name="q1"><?= htmlspecialchars($_POST['q1'] ?? '') ?></textarea>
                 <span class="error"><?= $errors['q1'] ?? '' ?></span>
             </div>
 
             <div class="question-container">
-                <label>2. What are your goals?</label>
+                <label>2. What is your favorite way to relax?</label>
                 <textarea name="q2"><?= htmlspecialchars($_POST['q2'] ?? '') ?></textarea>
                 <span class="error"><?= $errors['q2'] ?? '' ?></span>
             </div>
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 
 <div class="question-container">
-    <label>6. Do you like coding?</label>
+    <label>6. Do you enjoy trying new foods?</label>
     <div class="radio-group">
         <label><input type="radio" name="q6" value="Yes" <?= (isset($_POST['q6']) && $_POST['q6'] === 'Yes') ? 'checked' : '' ?>> Yes</label>
         <label><input type="radio" name="q6" value="No" <?= (isset($_POST['q6']) && $_POST['q6'] === 'No') ? 'checked' : '' ?>> No</label>
@@ -122,15 +122,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <?php 
             $questions = [
-                "7. What is your favorite subject?" => ["IT308", "MS309"],
-                "8. What is your favorite food?" => ["Pizza", "Burger", "Salad", "Chicken"],
-                "9. What is your favorite pet?" => ["Dog", "Cat", "Bird", "Rabbit"],
-                "10. What is your favorite sport?" => ["Volleyball", "Badminton", "Basketball"],
-                "11. What is your favorite season?" => ["Winter", "Summer", "Spring"],
-                "12. What do you like to drink?" => ["Soda", "Juice", "Water"],
-                "13. What motivates you?" => ["Success", "Passion", "Money"],
-                "14. What is your favorite day of the week?" => ["Monday", "Friday", "Sunday"],
-                "15. What is your favorite topic?" => ["Tech", "Science", "Art"]
+      "7. What is your favorite book genre?" => ["Fiction", "Non-Fiction", "Mystery", "Fantasy"],
+      "8. How do you stay informed about current events?" => ["News Websites", "Social Media", "TV", "Podcasts"],
+      "9. What is your dream vacation destination?" => ["Beach", "Mountains", "City", "Countryside"],
+      "10. How do you prefer to communicate?" => ["Text", "Phone Call", "Email", "In-Person"],
+      "11. What is your favorite type of cuisine?" => ["Italian", "Chinese", "Mexican", "Indian"],
+      "12. How do you feel about remote work?" => ["Prefer it", "Neutral", "Dislike it", "No experience"],
+      "13, is your biggest source of stress?" => ["Work", "Relationships", "Finances", "Health"],
+      "14. What is your favorite way to relax?" => ["Meditation", "Watching TV", "Reading", "Spending time with family"],
+      "15. What motivates you to achieve your goals?" => ["Personal Growth", "Financial Stability", "Recognition", "Helping Others"]
             ];
 
             $q_num = 7;

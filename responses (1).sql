@@ -28,22 +28,22 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `tbl_responses` (
-  `r_id` int(50) NOT NULL,
-  `r_des` varchar(200) NOT NULL,
-  `r_goals` varchar(200) NOT NULL,
-  `r_email` varchar(200) NOT NULL,
-  `r_na` varchar(200) NOT NULL,
-  `r_gender` varchar(200) NOT NULL,
-  `r_code` varchar(200) NOT NULL,
-  `r_sub` varchar(200) NOT NULL,
-  `r_food` varchar(200) NOT NULL,
-  `r_pet` varchar(200) NOT NULL,
-  `r_sport` varchar(200) NOT NULL,
-  `r_season` varchar(200) NOT NULL,
-  `r_drink` varchar(200) NOT NULL,
-  `r_motiv` varchar(200) NOT NULL,
-  `r_week` varchar(200) NOT NULL,
-  `r_top` varchar(200) NOT NULL
+  `k_id` int(50) NOT NULL,
+  `k_des` varchar(200) NOT NULL,
+  `k_goals` varchar(200) NOT NULL,
+  `k_email` varchar(200) NOT NULL,
+  `k_na` varchar(200) NOT NULL,
+  `k_gender` varchar(200) NOT NULL,
+  `k_code` varchar(200) NOT NULL,
+  `k_sub` varchar(200) NOT NULL,
+  `k_food` varchar(200) NOT NULL,
+  `k_pet` varchar(200) NOT NULL,
+  `k_sport` varchar(200) NOT NULL,
+  `k_season` varchar(200) NOT NULL,
+  `k_drink` varchar(200) NOT NULL,
+  `k_motiv` varchar(200) NOT NULL,
+  `k_week` varchar(200) NOT NULL,
+  `k_top` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

@@ -10,7 +10,7 @@ if (!isset($_GET['id']) || empty($_GET['id'])) {
 $id = intval($_GET['id']); // Convert to integer for security
 
 // Fetch specific response by ID
-$sql = "SELECT * FROM tbl_responses WHERE r_id = ?";
+$sql = "SELECT * FROM tbl_responses WHERE k_id = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -107,47 +107,47 @@ $conn->close();
             </tr>
             <tr>
                 <th>ID</th>
-                <td><?= $row['r_id'] ?></td>
+                <td><?= $row['k_id'] ?></td>
                 <th>Description</th>
-                <td><?= htmlspecialchars($row['r_des']) ?></td>
+                <td><?= htmlspecialchars($row['k_des']) ?></td>
                 <th>Goals</th>
-                <td><?= htmlspecialchars($row['r_goals']) ?></td>
+                <td><?= htmlspecialchars($row['k_goals']) ?></td>
             </tr>
             <tr>
                 <th>Email</th>
-                <td><?= htmlspecialchars($row['r_email']) ?></td>
+                <td><?= htmlspecialchars($row['k_email']) ?></td>
                 <th>Name</th>
-                <td><?= htmlspecialchars($row['r_na']) ?></td>
+                <td><?= htmlspecialchars($row['k_na']) ?></td>
                 <th>Gender</th>
-                <td><?= htmlspecialchars($row['r_gender']) ?></td>
+                <td><?= htmlspecialchars($row['k_gender']) ?></td>
             </tr>
             <tr>
                 <th>Code</th>
-                <td><?= htmlspecialchars($row['r_code']) ?></td>
+                <td><?= htmlspecialchars($row['k_code']) ?></td>
                 <th>Subject</th>
-                <td><?= htmlspecialchars($row['r_sub']) ?></td>
+                <td><?= htmlspecialchars($row['k_sub']) ?></td>
                 <th>Food</th>
-                <td><?= htmlspecialchars($row['r_food']) ?></td>
+                <td><?= htmlspecialchars($row['k_food']) ?></td>
             </tr>
             <tr>
                 <th>Pet</th>
-                <td><?= htmlspecialchars($row['r_pet']) ?></td>
+                <td><?= htmlspecialchars($row['k_pet']) ?></td>
                 <th>Sport</th>
-                <td><?= htmlspecialchars($row['r_sport']) ?></td>
+                <td><?= htmlspecialchars($row['k_sport']) ?></td>
                 <th>Season</th>
-                <td><?= htmlspecialchars($row['r_season']) ?></td>
+                <td><?= htmlspecialchars($row['k_season']) ?></td>
             </tr>
             <tr>
                 <th>Drink</th>
-                <td><?= htmlspecialchars($row['r_drink']) ?></td>
+                <td><?= htmlspecialchars($row['k_drink']) ?></td>
                 <th>Motivation</th>
-                <td><?= htmlspecialchars($row['r_motiv']) ?></td>
+                <td><?= htmlspecialchars($row['k_motiv']) ?></td>
                 <th>Week</th>
-                <td><?= htmlspecialchars($row['r_week']) ?></td>
+                <td><?= htmlspecialchars($row['k_week']) ?></td>
             </tr>
             <tr>
                 <th>Top</th>
-                <td colspan="5"><?= htmlspecialchars($row['r_top']) ?></td>
+                <td colspan="5"><?= htmlspecialchars($row['k_top']) ?></td>
             </tr>
             <tr>
                 <td colspan="6" class="button-container">
