@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c; /* Dark background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container */
+.container {
+    background: #2c2c2c; /* Darker container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 1500px;
+    text-align: center;
+    margin-top: 20px; /* Adjust this value for better spacing */
+    overflow: hidden; /* Ensure no content overflows */
+}
+
+h2 {    
+    text-align: center;
+    color: #e74c3c; /* Red color for headings */
+    margin-bottom: 20px;
+}
+
+/* Table Container */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures the table fits within the container */
+}
+
+th, td {
+    border: 1px solid #444; /* Dark border */
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; /* Prevents text from overflowing */
+    white-space: normal; /* Allows text to wrap */
+    color: #f5f5f5; /* Light text color */
+}
+
+th {
+    background-color: #e74c3c; /* Red background for headers */
+    color: white;
+    font-weight: bold;
+}
+
+/* Action Buttons */
+td .action-buttons a {
+    text-decoration: none;
+    padding: 10px; /* Padding for better visibility */
+    border-radius: 45px;
+    font-size: 14px;
+    display: flex; /* Align text inside button */
+    justify-content: center; /* Center text */
+    align-items: center; /* Center text vertically */
+    margin: 5px; /* Space between buttons */
+    min-width: 100px; /* Minimum width for buttons */
+    height: 25px; /* Fixed height for buttons */
+}
+
+/* View Button */
+td a.view {
+    background-color: #17a2b8; /* Teal color */
+    color: white;
+}
+
+td a.view:hover {
+    background-color: #138496; /* Darker teal on hover */
+}
+
+/* Edit Button */
+td a.edit {
+    background-color: #ffc107; /* Yellow color */
+    color: black; /* Ensures readability */
+}
+
+td a.edit:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+/* Delete Button */
+td a.delete {
+    background-color: #dc3545; /* Red color */
+    color: white;
+}
+
+td a.delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Back Button */
+.back-button-container {
+    margin-top: 20px;
+}
+
+.back-button-container a {
+    display: inline-block;
+    background: #e74c3c; /* Red background */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    min-width: 100px; /* Minimum width for back button */
+    height: 40px; /* Fixed height for back button */
+    display: flex; /* Align text inside button */
+    justify-content: center; /* Center text */
+    align-items: center; /* Center text vertically */
+}
+
+.back-button-container a:hover {
+    background: #c0392b; /* Darker red on hover */
+}
